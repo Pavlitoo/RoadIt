@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мій персональний сайт</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+</head>
+<body>
+    <div id="root">
+        <!-- React буде рендеритися тут -->
+    </div>
+
+    <!-- Базова структура сайту без React (запасний варіант) -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <h1>Road to IT</h1>
+                </div>
+                <nav class="navbar">
+                    <ul>
+                        <li><a href="#home">Головна</a></li>
+                        <li><a href="#about">Про мене</a></li>
+                        <li><a href="#skills">Навички</a></li>
+                        <li><a href="#portfolio">Портфоліо</a></li>
+                        <li><a href="#contact">Контакти</a></li>
+                    </ul>
+                </nav>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1 class="animated-text">Привіт, я <span class="highlight">Ваше Ім'я</span></h1>
+                    <h2>Ваша професія або слоган</h2>
+                    <p>Короткий опис себе та ваших цілей</p>
+                    <div class="cta-buttons">
+                        <a href="#portfolio" class="btn primary">Мої роботи</a>
+                        <a href="#contact" class="btn secondary">Зв'язатися</a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <div class="image-container">
+                        <img src="/api/placeholder/400/400" alt="Ваше фото">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-header">
+                <h2>Про мене</h2>
+                <div class="underline"></div>
+            </div>
+            <div class="about-content">
+                <div class="about-image">
+                    <img src="/api/placeholder/400/500" alt="Фото про мене">
+                </div>
+                <div class="about-text">
+                    <h3>Хто я</h3>
+                    <p>Детальний опис вашого досвіду, освіти та інтересів. Розкажіть свою історію, що вас мотивує та які ваші цілі.</p>
+                    
+                    <h3>Мій досвід</h3>
+                    <div class="experience-item">
+                        <span class="date">2020 - Зараз</span>
+                        <h4>Ваша поточна посада</h4>
+                        <p>Опис вашої ролі та досягнень</p>
+                    </div>
+                    <div class="experience-item">
+                        <span class="date">2018 - 2020</span>
+                        <h4>Попередня посада</h4>
+                        <p>Опис вашої ролі та досягнень</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="skills">
+        <div class="container">
+            <div class="section-header">
+                <h2>Мої навички</h2>
+                <div class="underline"></div>
+            </div>
+            <div class="skills-content">
+                <div class="skill-category">
+                    <h3>Технічні навички</h3>
+                    <div class="skills-grid">
+                        <div class="skill-item">
+                            <div class="skill-icon"><i class="fab fa-html5"></i></div>
+                            <h4>HTML5</h4>
+                            <div class="skill-bar">
+                                <div class="skill-level" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon"><i class="fab fa-css3-alt"></i></div>
+                            <h4>CSS3</h4>
+                            <div class="skill-bar">
+                                <div class="skill-level" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon"><i class="fab fa-js"></i></div>
+                            <h4>JavaScript</h4>
+                            <div class="skill-bar">
+                                <div class="skill-level" style="width: 80%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon"><i class="fab fa-react"></i></div>
+                            <h4>React</h4>
+                            <div class="skill-bar">
+                                <div class="skill-level" style="width: 75%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="portfolio" class="portfolio">
+        <div class="container">
+            <div class="section-header">
+                <h2>Моє портфоліо</h2>
+                <div class="underline"></div>
+            </div>
+            <div class="portfolio-filters">
+                <button class="filter-btn active" data-filter="all">Усі</button>
+                <button class="filter-btn" data-filter="web">Веб-сайти</button>
+                <button class="filter-btn" data-filter="mobile">Мобільні додатки</button>
+                <button class="filter-btn" data-filter="design">Дизайн</button>
+            </div>
+            <div class="portfolio-grid">
+                <div class="portfolio-item" data-category="web">
+                    <div class="portfolio-image">
+                        <img src="/api/placeholder/400/300" alt="Проект 1">
+                        <div class="overlay">
+                            <div class="overlay-content">
+                                <h3>Назва проекту 1</h3>
+                                <p>Веб-розробка</p>
+                                <a href="#" class="btn">Переглянути</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-item" data-category="design">
+                    <div class="portfolio-image">
+                        <img src="/api/placeholder/400/300" alt="Проект 2">
+                        <div class="overlay">
+                            <div class="overlay-content">
+                                <h3>Назва проекту 2</h3>
+                                <p>Дизайн</p>
+                                <a href="#" class="btn">Переглянути</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-item" data-category="mobile">
+                    <div class="portfolio-image">
+                        <img src="/api/placeholder/400/300" alt="Проект 3">
+                        <div class="overlay">
+                            <div class="overlay-content">
+                                <h3>Назва проекту 3</h3>
+                                <p>Мобільна розробка</p>
+                                <a href="#" class="btn">Переглянути</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2>Зв'яжіться зі мною</h2>
+                <div class="underline"></div>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="icon"><i class="fas fa-envelope"></i></div>
+                        <div class="text">
+                            <h3>Email</h3>
+                            <p>your.email@example.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="icon"><i class="fas fa-phone"></i></div>
+                        <div class="text">
+                            <h3>Телефон</h3>
+                            <p>+380 XX XXX XX XX</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="icon"><i class="fas fa-map-marker-alt"></i></div>
+                        <div class="text">
+                            <h3>Локація</h3>
+                            <p>Ваше місто, Україна</p>
+                        </div>
+                    </div>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <input type="text" id="name" placeholder="Ваше ім'я" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" placeholder="Ваш email" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" id="subject" placeholder="Тема" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" placeholder="Ваше повідомлення" required></textarea>
+                        </div>
+                        <button type="submit" class="btn primary">Надіслати повідомлення</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="copyright">
+                    <p>&copy; 2025 Ваше Ім'я. Всі права захищені.</p>
+                </div>
+                <div class="back-to-top">
+                    <a href="#home"><i class="fas fa-arrow-up"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Скрипти -->
+    <script src="js/main.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/18.2.0/umd/react.production.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/18.2.0/umd/react-dom.production.min.js"></script>
+    <script src="js/react-components.js"></script>
+</body>
+</html>
